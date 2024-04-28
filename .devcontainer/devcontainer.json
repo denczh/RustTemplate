@@ -7,11 +7,18 @@
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     "extensions": [
-        "rust-lang.rust",
+        "rust-lang.rust-analyzer",
         "GitHub.copilot-nightly",
-        "GitHub.copilot-labs"
+        "GitHub.copilot-labs",
+        "GitHub.copilot-chat"
     ],
-    "forwardPorts": [],
-    "postCreateCommand": "cargo build",
-    "remoteUser": "root"
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "./setup.sh",
+
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
 }
