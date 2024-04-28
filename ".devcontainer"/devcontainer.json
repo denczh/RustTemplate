@@ -1,0 +1,17 @@
+{
+    "name": "Rust Development",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "rust-lang.rust",
+        "mutantdino.resourcemonitor",
+        "vadimcn.vscode-lldb"
+    ],
+    "forwardPorts": [],
+    "postCreateCommand": "cargo build",
+    "remoteUser": "root"
+}
